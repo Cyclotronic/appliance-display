@@ -1,0 +1,23 @@
+[workspace]
+members = [
+    "crates/display-core",
+    "crates/display-transport",
+    "crates/appliance-display",
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+rust-version = "1.75"
+authors = ["Cyclotron"]
+repository = "https://github.com/Cyclotronic/appliance-display"
+homepage = "https://github.com/Cyclotronic/appliance-display"
+
+[profile.release]
+codegen-units = 1
+lto = true
+opt-level = "z"
+panic = "abort"
+strip = true

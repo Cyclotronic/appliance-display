@@ -1,0 +1,15 @@
+Source: appliance-display
+Section: admin
+Priority: optional
+Maintainer: Cyclotron <Cyclotronic@users.noreply.github.com>
+Homepage: https://github.com/Cyclotronic/appliance-display
+Build-Depends: debhelper-compat (= 13), cargo, rustc
+Standards-Version: 4.7.0
+Rules-Requires-Root: no
+
+Package: appliance-display
+Architecture: any
+Depends: adduser, ${shlibs:Depends}, ${misc:Depends}
+Description: Front-panel display and button service for network appliances
+ Controls Portwell EZIO-compatible character displays and keypads through a
+ local service and command-line client.

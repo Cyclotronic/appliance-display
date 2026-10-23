@@ -1,0 +1,5 @@
+appliance-display (0.1.0) unstable; urgency=medium
+
+  * Initial hardware-validated development package.
+
+ -- Cyclotron <Cyclotronic@users.noreply.github.com>  Fri, 23 Oct 2026 14:30:00 -0400

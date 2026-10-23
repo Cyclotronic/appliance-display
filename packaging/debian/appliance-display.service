@@ -1,0 +1,29 @@
+[Unit]
+Description=Appliance front-panel display service
+After=local-fs.target
+
+[Service]
+Type=simple
+User=appliance-display
+Group=appliance-display
+SupplementaryGroups=dialout
+RuntimeDirectory=appliance-display
+RuntimeDirectoryMode=0750
+ExecStart=/usr/sbin/appliance-display serve --device /dev/ttyS1
+Restart=on-failure
+RestartSec=2s
+
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=yes
+LockPersonality=yes
+MemoryDenyWriteExecute=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+/target/
+/*.deb
+/dist/
+
+# Local editor, OS, and assistant state
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+.claude/settings.local.json
+*.swp

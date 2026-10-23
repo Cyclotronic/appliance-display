@@ -1,0 +1,14 @@
+# This repository is edited from Linux, macOS, and Windows through a network
+# share. Keep text byte-stable in Git and in every working tree.
+* text=auto eol=lf
+
+*.rs      text eol=lf
+*.toml    text eol=lf
+*.md      text eol=lf
+*.yml     text eol=lf
+*.yaml    text eol=lf
+*.service text eol=lf
+*.postinst text eol=lf
+*.sh      text eol=lf
+
+*.deb binary

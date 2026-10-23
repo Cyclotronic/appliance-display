@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+
+if ! getent group appliance-display >/dev/null; then
+    addgroup --system appliance-display
+fi
+if ! getent passwd appliance-display >/dev/null; then
+    adduser --system --ingroup appliance-display --no-create-home \
+        --home /nonexistent appliance-display
+fi
+
+#DEBHELPER#

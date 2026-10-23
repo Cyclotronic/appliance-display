@@ -1,0 +1,17 @@
+[package]
+name = "appliance-display-transport"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+repository.workspace = true
+homepage.workspace = true
+description = "Unix serial transport for appliance front-panel displays"
+
+[dependencies]
+appliance-display-core = { path = "../display-core" }
+libc = "0.2"
+
+[lib]
+path = "src/lib.rs"
